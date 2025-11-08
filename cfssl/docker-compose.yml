@@ -1,0 +1,11 @@
+services:
+  cfssl:
+    image: cfssl/cfssl:latest
+    container_name: cfssl
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./pki:/etc/cfssl
+    working_dir: /etc/cfssl
+    command: serve -address=0.0.0.0 -port=8888 -ca=ca.pem -ca-key=ca-key.pem -config=config.json -db-config=db-config.json -loglevel=0
+    restart: unless-stopped

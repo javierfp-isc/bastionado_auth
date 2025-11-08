@@ -1,0 +1,7 @@
+Comando usado para generar certificado y clave de la CA:
+docker run --rm -v $(pwd)/pki:/etc/cfssl cfssl/cfssl gencert -initca /etc/cfssl/ca-csr.json > pki/ca.json
+
+Extracción:
+jq -r '.cert' pki/ca.json > pki/ca.pem
+jq -r '.key' pki/ca.json > pki/ca-key.pem
+jq -r '.csr' pki/ca.json > pki/ca.csr

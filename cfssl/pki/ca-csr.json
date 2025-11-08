@@ -1,0 +1,20 @@
+{
+    "CN": "BRS Root CA",
+    "key": {
+      "algo": "rsa",
+      "size": 4096
+    },
+    "names": [
+      {
+        "C": "ES",
+        "L": "Santiago de Compostela",
+        "O": "BRS PKI",
+        "OU": "BRS",
+        "ST": "Corunha"
+      }
+    ],
+    "ca": {
+      "expiry": "87600h"
+    }
+  }
+  
