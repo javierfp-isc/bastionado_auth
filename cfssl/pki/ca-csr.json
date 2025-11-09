@@ -1,20 +1,19 @@
 {
-    "CN": "BRS Root CA",
+    "CN": "example.net",
+    "hosts": [
+        "example.net",
+        "www.example.net"
+    ],
     "key": {
-      "algo": "rsa",
-      "size": 4096
+        "algo": "ecdsa",
+        "size": 256
     },
     "names": [
-      {
-        "C": "ES",
-        "L": "Santiago de Compostela",
-        "O": "BRS PKI",
-        "OU": "BRS",
-        "ST": "Corunha"
-      }
-    ],
-    "ca": {
-      "expiry": "87600h"
-    }
-  }
-  
+        {
+            "C": "US",
+            "ST": "CA",
+            "L": "San Francisco"
+        }
+    ]
+}
+

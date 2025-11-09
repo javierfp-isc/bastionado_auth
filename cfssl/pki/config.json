@@ -1,19 +1,26 @@
 {
     "signing": {
-      "default": {
-        "expiry": "8760h",
-        "usages": ["digital signature", "key encipherment", "server auth", "client auth"]
-      },
-      "profiles": {
-        "server": {
-          "expiry": "8760h",
-          "usages": ["digital signature", "key encipherment", "server auth"]
+        "default": {
+            "expiry": "168h"
         },
-        "client": {
-          "expiry": "8760h",
-          "usages": ["digital signature", "key encipherment", "client auth"]
+        "profiles": {
+            "www": {
+                "expiry": "8760h",
+                "usages": [
+                    "signing",
+                    "key encipherment",
+                    "server auth"
+                ]
+            },
+            "client": {
+                "expiry": "8760h",
+                "usages": [
+                    "signing",
+                    "key encipherment",
+                    "client auth"
+                ]
+            }
         }
-      }
     }
-  }
-  
+}
+
